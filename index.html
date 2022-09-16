@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Carousel</title>
-</head>
-<body>
+<html lang="en" class="bg-gray-700">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/4a314d7cd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/tailwindcss">
+      @layer components {
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <section>
-            <img id="carousel-img" src="images/pic-1.jpg" alt="">
-        </section>
+      <section class="w-3/4 h-[500px] relative mx-auto mt-10">
+        <img
+          class="w-full h-full object-cover rounded-md shadow-xl"
+          id="carousel-img"
+          src="images/pic-1.jpg"
+          alt=""
+        />
+        <div
+          onclick="change(0)"
+          class="text-2xl text-gray-700 hover:opacity-100 opacity-50 absolute top-1/2 left-4 h-10 w-10 rounded-full p-4 -translate-y-1/2 grid place-content-center cursor-pointer select-none active:scale-95 hover:bg-gray-100 bg-gray-200"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div
+          onclick="change(1)"
+          class="text-2xl text-gray-700 hover:opacity-100 opacity-50 absolute top-1/2 right-4 h-10 w-10 rounded-full p-4 -translate-y-1/2 grid place-content-center cursor-pointer select-none active:scale-95 hover:bg-gray-100 bg-gray-200"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </section>
     </header>
     <script src="js/slider.js"></script>
-</body>
+  </body>
 </html>
